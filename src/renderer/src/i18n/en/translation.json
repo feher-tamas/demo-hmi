@@ -1,0 +1,83 @@
+{
+  "Quit": "Quit",
+  "English": "English",
+  "Hungarian": "Hungarian",
+  "Language": "LANGUAGE",
+  "Theme": "THEME",
+  "Dark": "Dark",
+  "Light": "Light",
+  "Overview": "Overview",
+  "NewTab": "New tab {{count}}",
+  "Bigger": "Bigger",
+  "Smaller": "Smaller",
+  "Format": "FORMAT",
+  "View": "VIEW",
+  "Settings": "Settings",
+  "DateFormat": "Date format",
+  "TimeFormat": "Time format",
+  "ChangesSaved": "Changes saved",
+  "Sensors": {
+    "Remote": {
+      "Title": "Remote sensors ({{count}})"
+    },
+    "Local": {
+      "Title": "Local sensors ({{count}})"
+    },
+    "SensorUsageMode": {
+      "CONTROLLER": "Controller",
+      "LISTENER": "Listener"
+    },
+    "SensorStatus": {
+      "SURVEILLANCE_CM": "Surveillance CM"
+    },
+    "Data": {
+      "Direction": "D",
+      "SurveillanceSectorWidth": "W",
+      "SurveillanceScanPaneElevation": "Ele",
+      "DspTemp": "DT",
+      "PsuTemp": "PT",
+      "PowerAmplifierTemp": "PA",
+      "Altitude": "Alt"
+    }
+  },
+  "Coordinates": {
+    "Lat": "Lat",
+    "Lng": "Lng",
+    "Range": "Rng",
+    "Azimuth": "Azm",
+    "MGRS": "MGRS",
+    "Easting": "Easting",
+    "Northing": "Northing",
+    "Zone": "Zone",
+    "Hemisphare": "Hemisphare"
+  },
+  "CloseTab": "Close tab",
+  "OpenTab": "Open in new window",
+  "About": "About",
+  "General": "General",
+  "Reset": {
+    "Label": "Reset",
+    "Description": "By clicking the reset settings button all your settings will be modified to original.",
+    "Button": "Reset settings",
+    "ConfirmMessage": "Are you sure you want to reset all settings?"
+  },
+  "Cancel": "Cancel",
+  "DragAndDrop": {
+    "Title": "Drag & drop",
+    "Label": "Select and drag a sensor and drop here!",
+    "Replace": "By dropping here you change the sensor"
+  },
+  "Hour_one": "hour",
+  "Hour_other": "hours",
+  "Minute_one": "minute",
+  "Minute_other": "minutes",
+  "Charging": "Charging...",
+  "FullyCharged": "Fully charged",
+  "CalculatingDischargeTime": "Calculating discharge time...",
+  "ConnectedToMapService": "Connected to Map Service",
+  "NotConnectedToMapService": "Not connected to Map Service",
+  "ConnectedToMapServer": "Connected to Map Server",
+  "NotConnectedToMapServer": "Not connected to Map Server",
+  "ConnectedToRadar": "Connected to Radar",
+  "NotConnectedToRadar": "Not connected to Radar"
+}

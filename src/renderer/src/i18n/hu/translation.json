@@ -1,0 +1,83 @@
+{
+  "Quit": "Kilépés",
+  "English": "Angol",
+  "Hungarian": "Magyar",
+  "Language": "NYELV",
+  "Theme": "TÉMA",
+  "Dark": "Sötét",
+  "Light": "Világos",
+  "Overview": "Áttekintés",
+  "NewTab": "Új lap {{count}}",
+  "Bigger": "Nagyobb",
+  "Smaller": "Kisebb",
+  "Format": "FORMÁTUM",
+  "View": "NÉZET",
+  "Settings": "Beállítások",
+  "DateFormat": "Dátum formátum",
+  "TimeFormat": "Idő formátum",
+  "ChangesSaved": "Változtatások elmentve",
+  "Sensors": {
+    "Remote": {
+      "Title": "Távoli szenzorok ({{count}})"
+    },
+    "Local": {
+      "Title": "Helyi szenzorok ({{count}})"
+    },
+    "SensorUsageMode": {
+      "CONTROLLER": "Controller",
+      "LISTENER": "Listener"
+    },
+    "SensorStatus": {
+      "SURVEILLANCE_CM": "Surveillance CM"
+    },
+    "Data": {
+      "Direction": "D",
+      "SurveillanceSectorWidth": "W",
+      "SurveillanceScanPaneElevation": "Ele",
+      "DspTemp": "DT",
+      "PsuTemp": "PT",
+      "PowerAmplifierTemp": "PA",
+      "Altitude": "Alt"
+    }
+  },
+  "Coordinates": {
+    "Lat": "Lat",
+    "Lng": "Lng",
+    "Range": "Rng",
+    "Azimuth": "Azm",
+    "MGRS": "MGRS",
+    "Easting": "Easting",
+    "Northing": "Northing",
+    "Zone": "Zone",
+    "Hemisphare": "Hemisphare"
+  },
+  "CloseTab": "Fül bezárása",
+  "OpenTab": "Megnyitás új ablakban",
+  "About": "Névjegy",
+  "General": "Általános",
+  "Reset": {
+    "Label": "Visszaállítás",
+    "Description": "A beállítások visszaállítása gombra kattintva az összes beállítás az eredetire módosul.",
+    "Button": "Beállítások visszaállítása",
+    "ConfirmMessage": "Biztos, hogy vissza akarja állítani az összes beállítást?"
+  },
+  "Cancel": "Mégse",
+  "DragAndDrop": {
+    "Title": "Drag & drop",
+    "Label": "Válassza ki és húzza ide a szenzort!",
+    "Replace": "Ide helyezve lecseréli a szenzort"
+  },
+  "Hour_one": "óra",
+  "Hour_other": "órák",
+  "Minute_one": "perc",
+  "Minute_other": "percek",
+  "Charging": "Töltés...",
+  "FullyCharged": "Teljesen feltöltve",
+  "CalculatingDischargeTime": "Kiszámítás alatt...",
+  "ConnectedToMapService": "Csatlakoztatva a Térkép szolgáltatáshoz",
+  "NotConnectedToMapService": "Nincs csatlakoztatva a Térkép szolgáltatáshoz",
+  "ConnectedToMapServer": "Csatlakoztatva a Térkép szerverhez",
+  "NotConnectedToMapServer": "Nincs csatlakoztatva a Térkép szerverhez",
+  "ConnectedToRadar": "Csatlakoztatva a Radarhoz",
+  "NotConnectedToRadar": "Nincs csatlakoztatva a Radarhoz"
+}

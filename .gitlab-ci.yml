@@ -1,0 +1,35 @@
+variables:
+  PROJECT_NAME: 'HMI'
+  DEPLOY_FOLDER: '\\10.97.27.44\Documents\Builds\%PROJECT_NAME%'
+  RELEASE_PATH: 'dist\win-unpacked'
+
+stages: # List of stages for jobs, and their order of execution
+  - cleanup
+  - build
+  - deploy
+
+cleanup_step:
+  stage: cleanup
+  script:
+    - 'get-childitem $env:DEPLOY_FOLDER | Where-Object {$_.lastwritetime -lt (get-date).addDays(-5)} | Remove-Item -Recurse -Force'
+
+build-solution:
+  stage: build
+  script:
+    - npm ci
+    - npm run build:win
+  artifacts:
+    expire_in: 1 days
+    paths:
+      - 'dist' # saving exe to copy to deploy folder
+  dependencies:
+    - cleanup_step
+
+deploy_job:
+  stage: deploy
+  script:
+    - '$commitShortSHA = $CI_COMMIT_SHORT_SHA'
+    - '$deployFolder = $($env:DEPLOY_FOLDER) + "\" + $($env:CI_PIPELINE_ID) + " - " + $($env:CI_COMMIT_BRANCH) + " - " + $((get-date).ToString("yyyy_MM_ddTHH_mm_ss"))+"\"'
+    - '& xcopy /y /s /i $env:RELEASE_PATH "$deployFolder"'
+  dependencies:
+    - build-solution

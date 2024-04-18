@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5433:5432' # Port 5433 will be used by docker to create the database under localhost
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  mapservice:
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    image: swggitlab.ppe.local:5050/newadams/map_service/mapservice:latest
+    ports:
+      - '5055:5055'
+      - '5056:5056'
+    volumes:
+      - ~/docker/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  ppe.mlu.service:
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    image: swggitlab.ppe.local:5050/newadams/mluradar_service/ppemluservice:latest
+    depends_on:
+      ppe.mlu.simulator:
+        condition: service_healthy
+    ports:
+      - '127.0.0.1:5051:5051'
+      - '127.0.0.1:5052:5052'
+
+  ppe.mlu.simulator:
+    image: swggitlab.ppe.local:5050/newadams/mluradar_service/ppemlusimulator:latest
+    volumes:
+      - ./NatlogFolder:/app/NatlogFolder
+    healthcheck:
+      test: ['CMD', 'echo', '>', '/dev/tcp/127.0.0.1/9999']
+      interval: 1s
+      timeout: 1s
+      retries: 50
+      start_period: 1s
+volumes:
+  db:
+    driver: local
